@@ -1,13 +1,13 @@
 import { useAuth } from '../context/AuthContext';
 import { Wallet as WalletIcon, TrendingUp, Shield } from 'lucide-react';
-import { Doughnut } from 'react-chartjs-2';
+
 
 export default function Wallet() {
     const { user } = useAuth();
 
     // Mock data for UI as market mock was in backend and we need simpler UI for now
     const goldPrice = 85.50;
-    const silverPrice = 1.20;
+    // const silverPrice = 1.20;
 
     const goldValue = (user?.goldBalance || 0) * goldPrice;
 

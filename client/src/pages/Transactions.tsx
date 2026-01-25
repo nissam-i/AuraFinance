@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import api from '../services/api';
-import { Plus, Search, Calendar, DollarSign, Tag, ArrowUpRight, ArrowDownLeft, X } from 'lucide-react';
+import { Plus, Search, Calendar, Tag, ArrowUpRight, ArrowDownLeft, X } from 'lucide-react';
 import { format } from 'date-fns';
 import clsx from 'clsx';
 import { motion, AnimatePresence } from 'framer-motion';
