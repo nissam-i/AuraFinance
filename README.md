@@ -42,8 +42,19 @@ Run the full stack (Frontend + Backend) with a single command:
 ```bash
 npm start
 ```
-*   **Frontend**: Opens at `http://localhost:5173`
-*   **Backend**: Runs on `http://localhost:5000`
+45: *   **Frontend**: Opens at `http://localhost:5173` (or `5174` if 5173 is busy - check terminal)
+46: *   **Backend**: Runs on `http://localhost:5000`
+47: 
+48: ## ⚠️ Common Issues & Troubleshooting
+49: 
+50: ### 1. "Registration Failed" on Vercel
+51: If you deployed the frontend to Vercel/Netlify, you might see "Registration Failed".
+52: *   **Cause**: Vercel runs on **HTTPS** but your local backend is **HTTP**. Browsers block this for security ("Mixed Content").
+53: *   **Solution**: For proper testing, **Run Locally** using the steps above. The repository is designed to be a full-stack local experience.
+54: 
+55: ### 2. "Port 5173 is in use"
+56: If you have other apps running, the frontend will automatically switch to the next available port (e.g., `http://localhost:5174`).
+57: *   **Check your terminal**: It will print the exact URL (e.g., `➜ Local: http://localhost:5174/`).
 
 ## 🧪 Testing the App
 1.  **Register/Login**: Create a new account (Authentication is fully functional).
