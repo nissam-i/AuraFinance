@@ -115,7 +115,7 @@ export default function Transactions() {
                                     "font-bold text-lg",
                                     t.amount > 0 ? "text-emerald-400" : "text-rose-400"
                                 )}>
-                                    {t.amount > 0 ? '+' : ''}${Math.abs(t.amount).toFixed(2)}
+                                    {t.amount > 0 ? '+' : ''}₹{Math.abs(t.amount).toFixed(2)}
                                 </span>
                                 <button
                                     onClick={() => deleteTransaction(t.id)}
@@ -176,7 +176,7 @@ export default function Transactions() {
 
                                 <div className="grid grid-cols-2 gap-4">
                                     <div>
-                                        <label className="block text-sm text-gray-400 mb-1">Amount ($)</label>
+                                        <label className="block text-sm text-gray-400 mb-1">Amount (₹)</label>
                                         <input
                                             type="number"
                                             className="glass-input w-full"

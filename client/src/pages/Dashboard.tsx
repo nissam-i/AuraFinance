@@ -66,7 +66,7 @@ export default function Dashboard() {
                         <Wallet size={100} className="text-primary-500" />
                     </div>
                     <p className="text-gray-400 mb-1">Total Balance</p>
-                    <h3 className="text-3xl font-bold text-white">${(data?.totalIncome - data?.totalExpense).toFixed(2)}</h3>
+                    <h3 className="text-3xl font-bold text-white">₹{(data?.totalIncome - data?.totalExpense).toFixed(2)}</h3>
                     <div className="mt-4 flex items-center text-primary-400 text-sm">
                         <TrendingUp size={16} className="mr-1" />
                         <span>+12% vs last month</span>
@@ -80,7 +80,7 @@ export default function Dashboard() {
                         </div>
                         <span className="text-sm text-gray-400">Income</span>
                     </div>
-                    <h3 className="text-2xl font-bold text-white">${data?.totalIncome.toFixed(2)}</h3>
+                    <h3 className="text-2xl font-bold text-white">₹{data?.totalIncome.toFixed(2)}</h3>
                 </div>
 
                 <div className="glass-card p-6">
@@ -90,7 +90,7 @@ export default function Dashboard() {
                         </div>
                         <span className="text-sm text-gray-400">Expenses</span>
                     </div>
-                    <h3 className="text-2xl font-bold text-white">${data?.totalExpense.toFixed(2)}</h3>
+                    <h3 className="text-2xl font-bold text-white">₹{data?.totalExpense.toFixed(2)}</h3>
                 </div>
             </div>
 
@@ -115,7 +115,7 @@ export default function Dashboard() {
                         <div className="p-4 bg-white/5 rounded-xl border-l-4 border-primary-500">
                             <p className="text-sm text-gray-300">
                                 🤖 Based on your pattern, you are projected to save
-                                <span className="font-bold text-white"> ${data?.predictionNextMonth.toFixed(0)} </span>
+                                <span className="font-bold text-white"> ₹{data?.predictionNextMonth.toFixed(0)} </span>
                                 next month.
                             </p>
                         </div>

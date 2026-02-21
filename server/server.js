@@ -22,7 +22,7 @@ app.use(helmet());
 
 // CORS - Allow Client
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: ['http://localhost:5173', 'http://localhost:5174', 'http://192.168.74.214:8081', 'http://localhost:8081'], // Allow 5173, 5174, and Mobile
     credentials: true
 }));
 
@@ -42,6 +42,7 @@ if (process.env.NODE_ENV === 'development') {
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/transactions', require('./routes/transactions'));
 app.use('/api/ai', require('./routes/ai'));
+app.use('/api/payments', require('./routes/payments'));
 
 // Error Handler
 app.use((err, req, res, next) => {

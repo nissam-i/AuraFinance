@@ -15,6 +15,10 @@ exports.register = async (req, res, next) => {
 
         sendTokenResponse(user, 200, res);
     } catch (err) {
+        console.error(err);
+        if (err.name === 'SequelizeUniqueConstraintError') {
+            return res.status(400).json({ success: false, error: 'Email already exists. Please login.' });
+        }
         res.status(400).json({ success: false, error: err.message });
     }
 };
